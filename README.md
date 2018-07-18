@@ -167,13 +167,14 @@ class NavigationContainer extends Component {
   }
 
   render() {
+    // <>...</> is a a React fragment - it does not render anything to the DOM, but can wrap multiple JSX elements
     return (
-      <div >
+      <>
         <Logo />
         <NavLinks />
         <DropMenu username={ this.state.username }/>
         <Search query= {this.state.query } handleChange={ this.handleChange } handleSubmit={ this.handleSubmit }/>
-      </div>
+      </>
     )
   }
 
@@ -182,10 +183,9 @@ class NavigationContainer extends Component {
 }
 ```
 
-Using this sort of set up, none of the imported components above need to have
-their own state, nor do they need to have any functions defined. Container
-components, like NavigationContainer, deal with managing state and class
-methods.
+Using this sort of set up, none of the imported components need to have their
+own state, nor do they need to have any functions defined. Container components,
+like NavigationContainer, deal with managing state and class methods.
 
 Keeping all the more complex logic in one place makes it easier to follow the
 flow of information. It also keeps many components simpler and free of clutter.
