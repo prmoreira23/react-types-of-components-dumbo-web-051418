@@ -22,7 +22,7 @@ components
 
 We've covered the features of class components thoroughly through the previous
 lessons. To be clear, you can write _all of your components_ as class
-components. Evan with a complex app with many components, this will work just
+components. Even with a complex app with many components, this will work just
 fine.
 
 If you're not sure how complex a component will become while creating it, just
